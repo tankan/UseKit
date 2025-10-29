@@ -1,5 +1,5 @@
 /**
- * @usekit/http - HTTP 请求模块
+ * @hookkit/http - HTTP 请求模块
  * 基于 alova.js 的高级 HTTP 客户端
  */
 

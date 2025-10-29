@@ -1,16 +1,16 @@
 /**
- * @usekit/core - UseKit 核心包
+ * @hookkit/core - HookKit 核心包
  * 包含所有功能模块
  */
 
 // 导出共享工具
-export * from '@usekit/shared'
+export * from '@hookkit/shared'
 
 // 导出 HTTP 模块
-export * from '@usekit/http'
+export * from '@hookkit/http'
 
 // 导出日期模块
-export * from '@usekit/date'
+export * from '@hookkit/date'
 
 /**
  * 版本信息

@@ -1,5 +1,5 @@
 /**
- * @usekit/shared - 共享工具函数库
+ * @hookkit/shared - 共享工具函数库
  */
 
 export * from './types'

@@ -32,7 +32,7 @@ importers:
 
   examples/basic:
     dependencies:
-      '@usekit/core':
+      '@hookkit/core':
         specifier: workspace:*
         version: link:../../packages/core
     devDependencies:
@@ -48,19 +48,19 @@ importers:
 
   packages/core:
     dependencies:
-      '@usekit/date':
+      '@hookkit/date':
         specifier: workspace:*
         version: link:../date
-      '@usekit/http':
+      '@hookkit/http':
         specifier: workspace:*
         version: link:../http
-      '@usekit/shared':
+      '@hookkit/shared':
         specifier: workspace:*
         version: link:../shared
 
   packages/date:
     dependencies:
-      '@usekit/shared':
+      '@hookkit/shared':
         specifier: workspace:*
         version: link:../shared
       dayjs:
@@ -69,7 +69,7 @@ importers:
 
   packages/http:
     dependencies:
-      '@usekit/shared':
+      '@hookkit/shared':
         specifier: workspace:*
         version: link:../shared
       alova:

@@ -1,5 +1,5 @@
 /**
- * @usekit/date - 日期处理模块
+ * @hookkit/date - 日期处理模块
  * 基于 dayjs 的高级日期工具
  */
 

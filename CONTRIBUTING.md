@@ -182,7 +182,7 @@ export function createHttpClient(config: HttpClientConfig): HttpClient {
 pnpm test
 
 # 运行特定包的测试
-pnpm --filter @usekit/http test
+pnpm --filter @hookkit/http test
 
 # 运行测试 UI
 pnpm test:ui

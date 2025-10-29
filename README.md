@@ -50,10 +50,10 @@
 pnpm add @hookkit/core
 
 # 使用 npm
-npm install @usekit/core
+npm install @hookkit/core
 
 # 使用 yarn
-yarn add @usekit/core
+yarn add @hookkit/core
 ```
 
 ### 模块化安装
@@ -68,7 +68,7 @@ pnpm add @hookkit/http
 pnpm add @hookkit/date
 
 # 仅安装共享工具
-pnpm add @usekit/shared
+pnpm add @hookkit/shared
 ```
 
 ## 🚀 快速开始
@@ -181,7 +181,7 @@ await sleep(2000) // 等待 2 秒
 
 ## 📚 核心功能
 
-### 1. HTTP 请求模块 (`@usekit/http`)
+### 1. HTTP 请求模块 (`@hookkit/http`)
 
 基于 [alova.js](https://alova.js.org/) 的高级 HTTP 客户端：
 
@@ -240,14 +240,14 @@ const client = createHttpClient({
 })
 ```
 
-### 2. 日期处理模块 (`@usekit/date`)
+### 2. 日期处理模块 (`@hookkit/date`)
 
 基于 [dayjs](https://day.js.org/) 的日期工具：
 
 #### ✅ 日期格式化
 
 ```typescript
-import { format, DateFormats } from '@usekit/date'
+import { format, DateFormats } from '@hookkit/date'
 
 // 预定义格式
 format(date, DateFormats.ISO) // 2025-10-29T14:30:00.000Z
@@ -262,7 +262,7 @@ format(date, 'YYYY/MM/DD HH:mm')
 #### ✅ 时区处理
 
 ```typescript
-import { toTimezone, toUTC, getSystemTimezone } from '@usekit/date'
+import { toTimezone, toUTC, getSystemTimezone } from '@hookkit/date'
 
 // 转换时区
 toTimezone(date, 'America/New_York')
@@ -279,7 +279,7 @@ const timezone = getSystemTimezone() // 'Asia/Shanghai'
 #### ✅ 相对时间
 
 ```typescript
-import { fromNow, humanize, countdown } from '@usekit/date'
+import { fromNow, humanize, countdown } from '@hookkit/date'
 
 // 相对时间
 fromNow(subtract(now(), 2, 'hour')) // "2 小时前"
@@ -294,7 +294,7 @@ const { days, hours, minutes, seconds } = countdown(targetDate)
 #### ✅ 日期计算
 
 ```typescript
-import { add, subtract, diff, isBetween } from '@usekit/date'
+import { add, subtract, diff, isBetween } from '@hookkit/date'
 
 // 加减日期
 add(today(), 1, 'week')
@@ -308,7 +308,7 @@ diff(date1, date2, 'hour') // 小时差
 isBetween(date, start, end) // true/false
 ```
 
-### 3. 共享工具 (`@usekit/shared`)
+### 3. 共享工具 (`@hookkit/shared`)
 
 通用工具函数和类型定义：
 
@@ -320,7 +320,7 @@ import {
   sleep,
   isBrowser,
   isDev,
-} from '@usekit/shared'
+} from '@hookkit/shared'
 
 // 环境判断
 if (isBrowser) {
@@ -370,7 +370,7 @@ pnpm install
 pnpm dev
 
 # 仅开发特定包
-pnpm --filter @usekit/http dev
+pnpm --filter @hookkit/http dev
 ```
 
 ### 构建
@@ -380,7 +380,7 @@ pnpm --filter @usekit/http dev
 pnpm build
 
 # 构建特定包
-pnpm --filter @usekit/core build
+pnpm --filter @hookkit/core build
 ```
 
 ### 运行示例
@@ -417,10 +417,10 @@ pnpm test:ui
 
 详细的 API 文档请查看各个包的 README：
 
-- [@usekit/core](./packages/core/README.md)
-- [@usekit/http](./packages/http/)
-- [@usekit/date](./packages/date/)
-- [@usekit/shared](./packages/shared/)
+- [@hookkit/core](./packages/core/README.md)
+- [@hookkit/http](./packages/http/)
+- [@hookkit/date](./packages/date/)
+- [@hookkit/shared](./packages/shared/)
 
 ## 🤝 贡献指南
 

@@ -3,7 +3,7 @@
  */
 
 import type { RetryConfig } from '../types'
-import { sleep } from '@usekit/shared'
+import { sleep } from '@hookkit/shared'
 
 export class RetryInterceptor {
   private config: Required<RetryConfig>

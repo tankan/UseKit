@@ -3,7 +3,7 @@
  */
 
 import type { TokenRefreshConfig } from '../types'
-import { isBrowser } from '@usekit/shared'
+import { isBrowser } from '@hookkit/shared'
 
 export class TokenRefreshInterceptor {
   private config: Required<TokenRefreshConfig>

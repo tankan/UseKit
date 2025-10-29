@@ -3,7 +3,7 @@
  */
 
 import type { CacheConfig, RequestConfig, ResponseData } from '../types'
-import { isBrowser } from '@usekit/shared'
+import { isBrowser } from '@hookkit/shared'
 
 export class CacheInterceptor {
   private config: Required<CacheConfig>

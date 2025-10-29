@@ -2,7 +2,7 @@
  * HTTP 模块类型定义
  */
 
-import type { ConfigurableOptions } from '@usekit/shared'
+import type { ConfigurableOptions } from '@hookkit/shared'
 
 /**
  * 请求方法
