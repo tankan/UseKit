@@ -1,4 +1,4 @@
-# @usekit/core
+# @hookkit/core
 
 UseKit 核心包 - 包含所有功能模块的聚合包。
 
@@ -6,19 +6,19 @@ UseKit 核心包 - 包含所有功能模块的聚合包。
 
 ```bash
 # 使用 pnpm
-pnpm add @usekit/core
+pnpm add @hookkit/core
 
 # 使用 npm
-npm install @usekit/core
+npm install @hookkit/core
 
 # 使用 yarn
-yarn add @usekit/core
+yarn add @hookkit/core
 ```
 
 ## 快速开始
 
 ```typescript
-import { createHttpClient, format, today } from '@usekit/core'
+import { createHttpClient, format, today } from '@hookkit/core'
 
 // HTTP 请求
 const client = createHttpClient({

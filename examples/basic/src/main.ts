@@ -30,7 +30,7 @@ import {
   throttle,
   deepClone,
   sleep,
-} from '@usekit/core'
+} from '@hookkit/core'
 
 // ==================== HTTP 示例 ====================
 

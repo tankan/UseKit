@@ -1,5 +1,5 @@
 {
-  "name": "@usekit/date",
+  "name": "@hookkit/date",
   "version": "0.2.0",
   "description": "UseKit 日期处理模块 - 基于 dayjs 的高级日期工具",
   "type": "module",
@@ -29,7 +29,7 @@
   "author": "曾星旗",
   "license": "MIT",
   "dependencies": {
-    "@usekit/shared": "workspace:*",
+    "@hookkit/shared": "workspace:*",
     "dayjs": "^1.11.18"
   }
 }

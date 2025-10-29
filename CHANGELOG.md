@@ -141,10 +141,10 @@
 
 ### 📦 包版本
 
-- @usekit/core: 0.1.0 → 0.2.0
-- @usekit/shared: 0.1.0 → 0.2.0
-- @usekit/http: 0.1.0 → 0.2.0
-- @usekit/date: 0.1.0 → 0.2.0
+- @hookkit/core: 0.1.0 → 0.2.0
+- @hookkit/shared: 0.1.0 → 0.2.0
+- @hookkit/http: 0.1.0 → 0.2.0
+- @hookkit/date: 0.1.0 → 0.2.0
 
 ### 🔗 升级指南
 
@@ -169,7 +169,7 @@
 - 🔍 集成 Oxlint 代码检查工具
 - 🧪 配置 Vitest 测试框架
 
-#### @usekit/shared 包
+#### @hookkit/shared 包
 - 通用类型定义
   - `Nullable<T>`
   - `MaybeRef<T>`
@@ -183,7 +183,7 @@
   - `isBrowser` - 浏览器环境检测
   - `isDev` - 开发环境检测
 
-#### @usekit/http 包
+#### @hookkit/http 包
 - HTTP 客户端（基于 alova.js）
   - `createHttpClient()` - 创建客户端
   - 支持 GET/POST/PUT/DELETE/PATCH 方法
@@ -206,7 +206,7 @@
   - 并发数限制
   - 队列管理
 
-#### @usekit/date 包
+#### @hookkit/date 包
 - 核心日期功能（基于 dayjs）
   - `now()`, `today()`, `tomorrow()`, `yesterday()`
   - `add()`, `subtract()` - 日期加减
@@ -234,7 +234,7 @@
   - `smartFormat()` - 智能时间显示
   - `countdown()` - 倒计时功能
 
-#### @usekit/core 包
+#### @hookkit/core 包
 - 聚合所有功能模块
 - 统一导出接口
 - 版本信息导出
@@ -278,10 +278,10 @@
 
 ### 📦 包版本
 
-- @usekit/core: 0.1.0
-- @usekit/shared: 0.1.0
-- @usekit/http: 0.1.0
-- @usekit/date: 0.1.0
+- @hookkit/core: 0.1.0
+- @hookkit/shared: 0.1.0
+- @hookkit/http: 0.1.0
+- @hookkit/date: 0.1.0
 
 ### 🔗 依赖
 

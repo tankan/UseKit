@@ -30,7 +30,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'vendor': ['@usekit/core'],
+                'vendor': ['@hookkit/core'],
         },
       },
     },
@@ -44,7 +44,7 @@ export default defineConfig({
   
   // 依赖优化（Vite 7.x 改进）
   optimizeDeps: {
-    include: ['@usekit/core'],
+          include: ['@hookkit/core'],
     
     // 预构建优化
     force: false,

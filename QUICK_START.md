@@ -23,10 +23,10 @@ pnpm build
 ```
 
 这将构建以下包：
-- `@usekit/shared` - 共享工具
-- `@usekit/http` - HTTP 请求模块
-- `@usekit/date` - 日期处理模块
-- `@usekit/core` - 核心包（聚合所有功能）
+- `@hookkit/shared` - 共享工具
+- `@hookkit/http` - HTTP 请求模块
+- `@hookkit/date` - 日期处理模块
+- `@hookkit/core` - 核心包（聚合所有功能）
 
 ### 3. 运行示例
 
@@ -44,13 +44,13 @@ pnpm dev
 
 ```bash
 # 在您的项目中
-pnpm add @usekit/core
+pnpm add @hookkit/core
 ```
 
 ### 基础使用示例
 
 ```typescript
-import { createHttpClient, format, today } from '@usekit/core'
+import { createHttpClient, format, today } from '@hookkit/core'
 
 // HTTP 请求
 const client = createHttpClient({
@@ -73,7 +73,7 @@ console.log(format(today(), 'YYYY-MM-DD'))
 pnpm dev
 
 # 仅开发特定包
-pnpm --filter @usekit/http dev
+pnpm --filter @hookkit/http dev
 ```
 
 ### 代码检查
@@ -165,13 +165,13 @@ UseKit/
 
 ```bash
 # 为特定包安装依赖
-pnpm --filter @usekit/http add axios
+pnpm --filter @hookkit/http add axios
 
 # 为特定包运行脚本
-pnpm --filter @usekit/http build
+pnpm --filter @hookkit/http build
 
 # 为特定包运行开发模式
-pnpm --filter @usekit/date dev
+pnpm --filter @hookkit/date dev
 ```
 
 ## 📖 更多资源
@@ -186,10 +186,10 @@ pnpm --filter @usekit/date dev
 
 ```bash
 # 只安装 HTTP 模块
-pnpm add @usekit/http
+pnpm add @hookkit/http
 
 # 只安装日期模块
-pnpm add @usekit/date
+pnpm add @hookkit/date
 ```
 
 ### 2. 如何在 Vue/React/Svelte 中使用？
@@ -198,7 +198,7 @@ UseKit 的核心功能是框架无关的，可以直接在任何框架中使用�
 
 ```typescript
 // Vue 3
-import { createHttpClient } from '@usekit/core'
+import { createHttpClient } from '@hookkit/core'
 
 export default {
   setup() {
@@ -208,7 +208,7 @@ export default {
 }
 
 // React
-import { createHttpClient } from '@usekit/core'
+import { createHttpClient } from '@hookkit/core'
 
 function App() {
   const client = useMemo(() => 
@@ -220,7 +220,7 @@ function App() {
 
 // Svelte
 <script>
-  import { createHttpClient } from '@usekit/core'
+  import { createHttpClient } from '@hookkit/core'
   const client = createHttpClient({ /* config */ })
   // 使用 client...
 </script>

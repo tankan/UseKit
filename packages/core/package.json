@@ -1,5 +1,5 @@
 {
-  "name": "@usekit/core",
+  "name": "@hookkit/core",
   "version": "0.2.0",
   "description": "UseKit 核心包 - 包含所有功能模块",
   "type": "module",
@@ -29,9 +29,9 @@
   "author": "曾星旗",
   "license": "MIT",
   "dependencies": {
-    "@usekit/shared": "workspace:*",
-    "@usekit/http": "workspace:*",
-    "@usekit/date": "workspace:*"
+    "@hookkit/shared": "workspace:*",
+    "@hookkit/http": "workspace:*",
+    "@hookkit/date": "workspace:*"
   }
 }
 

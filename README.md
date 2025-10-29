@@ -46,7 +46,7 @@
 
 ```bash
 # 使用 pnpm（推荐）
-pnpm add @usekit/core
+pnpm add @hookkit/core
 
 # 使用 npm
 npm install @usekit/core
@@ -61,10 +61,10 @@ yarn add @usekit/core
 
 ```bash
 # 仅安装 HTTP 模块
-pnpm add @usekit/http
+pnpm add @hookkit/http
 
 # 仅安装日期模块
-pnpm add @usekit/date
+pnpm add @hookkit/date
 
 # 仅安装共享工具
 pnpm add @usekit/shared
@@ -75,7 +75,7 @@ pnpm add @usekit/shared
 ### HTTP 请求模块
 
 ```typescript
-import { createHttpClient } from '@usekit/core'
+import { createHttpClient } from '@hookkit/core'
 
 // 创建 HTTP 客户端
 const client = createHttpClient({
@@ -134,7 +134,7 @@ import {
   fromNow,
   smartFormat,
   DateFormats,
-} from '@usekit/core'
+} from '@hookkit/core'
 
 // 日期格式化
 format(new Date(), 'YYYY-MM-DD HH:mm:ss')
@@ -159,7 +159,7 @@ smartFormat(subtract(today(), 2, 'month')) // "08-29 14:30"（本年）
 ### 工具函数
 
 ```typescript
-import { debounce, throttle, deepClone, sleep } from '@usekit/core'
+import { debounce, throttle, deepClone, sleep } from '@hookkit/core'
 
 // 防抖
 const debouncedFn = debounce((value) => {

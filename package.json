@@ -1,5 +1,5 @@
 {
-  "name": "@usekit/monorepo",
+  "name": "@hookkit/monorepo",
   "version": "0.2.0",
   "private": true,
   "description": "一个即插即用的高级功能扩展库，为 Vue/React/Svelte/JavaScript/TypeScript 项目提供模块化体验",

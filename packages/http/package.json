@@ -1,5 +1,5 @@
 {
-  "name": "@usekit/http",
+  "name": "@hookkit/http",
   "version": "0.2.0",
   "description": "UseKit HTTP 请求模块 - 基于 alova.js 的高级 HTTP 客户端",
   "type": "module",
@@ -30,7 +30,7 @@
   "author": "曾星旗",
   "license": "MIT",
   "dependencies": {
-    "@usekit/shared": "workspace:*",
+    "@hookkit/shared": "workspace:*",
     "alova": "^3.3.4"
   },
   "peerDependencies": {
