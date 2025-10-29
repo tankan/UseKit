@@ -1,0 +1,37 @@
+{
+  "name": "@usekit/core",
+  "version": "0.2.0",
+  "description": "UseKit 核心包 - 包含所有功能模块",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [
+    "usekit",
+    "utilities",
+    "hooks",
+    "composables"
+  ],
+  "author": "曾星旗",
+  "license": "MIT",
+  "dependencies": {
+    "@usekit/shared": "workspace:*",
+    "@usekit/http": "workspace:*",
+    "@usekit/date": "workspace:*"
+  }
+}
+

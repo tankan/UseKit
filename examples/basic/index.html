@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UseKit 基础示例</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .card h2 {
+      color: #667eea;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .card h3 {
+      color: #555;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .result {
+      background: #f7fafc;
+      border-left: 4px solid #667eea;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .loading {
+      color: #667eea;
+      font-style: italic;
+    }
+
+    .error {
+      border-left-color: #f56565;
+      color: #c53030;
+    }
+
+    .success {
+      border-left-color: #48bb78;
+      color: #2f855a;
+    }
+
+    code {
+      background: #edf2f7;
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-size: 0.9em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .info-item {
+      background: #edf2f7;
+      padding: 0.75rem;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: #4a5568;
+    }
+
+    .info-value {
+      color: #667eea;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 UseKit 功能演示</h1>
+
+    <!-- HTTP 模块示例 -->
+    <div class="card">
+      <h2>📡 HTTP 请求模块</h2>
+      <p>基于 alova.js 的高级 HTTP 客户端，支持重试、缓存、Token 刷新等功能。</p>
+      
+      <h3>基础请求</h3>
+      <button id="btn-http-get">GET 请求</button>
+      <button id="btn-http-post">POST 请求</button>
+      <div id="http-result" class="result" style="display:none;"></div>
+
+      <h3>缓存功能</h3>
+      <button id="btn-http-cache">缓存请求（首次）</button>
+      <button id="btn-http-cache-again">缓存请求（再次）</button>
+      <div id="cache-result" class="result" style="display:none;"></div>
+    </div>
+
+    <!-- 日期模块示例 -->
+    <div class="card">
+      <h2>📅 日期处理模块</h2>
+      <p>基于 dayjs 的日期工具，提供格式化、时区、相对时间等功能。</p>
+      
+      <h3>日期格式化</h3>
+      <button id="btn-date-format">各种格式</button>
+      <button id="btn-date-relative">相对时间</button>
+      <button id="btn-date-smart">智能显示</button>
+      <div id="date-result" class="result" style="display:none;"></div>
+
+      <h3>日期计算</h3>
+      <button id="btn-date-calc">日期加减</button>
+      <button id="btn-date-diff">日期差值</button>
+      <button id="btn-date-compare">日期比较</button>
+      <div id="calc-result" class="result" style="display:none;"></div>
+
+      <h3>当前时间信息</h3>
+      <div class="grid">
+        <div class="info-item">
+          <span class="info-label">当前时间</span>
+          <span class="info-value" id="current-time">--</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">今天日期</span>
+          <span class="info-value" id="today-date">--</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">本周</span>
+          <span class="info-value" id="this-week">--</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">本月</span>
+          <span class="info-value" id="this-month">--</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 工具函数示例 -->
+    <div class="card">
+      <h2>🛠️ 工具函数</h2>
+      <p>常用的工具函数，如防抖、节流、深度克隆等。</p>
+      
+      <h3>防抖与节流</h3>
+      <button id="btn-debounce">防抖测试（连续点击）</button>
+      <button id="btn-throttle">节流测试（连续点击）</button>
+      <div id="util-result" class="result" style="display:none;"></div>
+
+      <h3>其他工具</h3>
+      <button id="btn-clone">深度克隆</button>
+      <button id="btn-sleep">延迟执行</button>
+      <div id="util-result2" class="result" style="display:none;"></div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
+

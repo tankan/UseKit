@@ -1,0 +1,45 @@
+{
+  "$schema": "https://oxc.rs/schema/oxlintrc.json",
+  
+  // Oxlint 1.x 稳定版配置
+  "plugins": [],
+  
+  "rules": {
+    // TypeScript 规则
+    "typescript/no-explicit-any": "warn",
+    "typescript/no-unused-vars": "error",
+    "typescript/ban-ts-comment": "warn",
+    "typescript/consistent-type-imports": "warn",
+    
+    // ESLint 核心规则
+    "eslint/no-console": "warn",
+    "eslint/no-debugger": "error",
+    "eslint/no-unused-vars": "error",
+    "eslint/no-undef": "error",
+    "eslint/prefer-const": "error",
+    "eslint/no-var": "error",
+    
+    // 代码质量规则（Oxlint 1.x 新增）
+    "eslint/eqeqeq": ["error", "always"],
+    "eslint/no-duplicate-imports": "error",
+    "eslint/no-unreachable": "error"
+  },
+  
+  "ignore": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/*.config.js",
+    "**/*.config.ts",
+    "**/coverage/**",
+    "**/test-results/**",
+    "**/.cache/**"
+  ],
+  
+  // Oxlint 1.x 性能优化选项
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true
+  }
+}
+

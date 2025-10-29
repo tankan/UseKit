@@ -1,0 +1,36 @@
+{
+  "name": "@usekit/date",
+  "version": "0.2.0",
+  "description": "UseKit 日期处理模块 - 基于 dayjs 的高级日期工具",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "dayjs",
+    "datetime"
+  ],
+  "author": "曾星旗",
+  "license": "MIT",
+  "dependencies": {
+    "@usekit/shared": "workspace:*",
+    "dayjs": "^1.11.18"
+  }
+}
+
