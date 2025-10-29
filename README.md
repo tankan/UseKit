@@ -2,8 +2,9 @@
 
 > 一个为 Vue/React/Svelte/JavaScript/TypeScript 项目打造的即插即用高级功能扩展库
 
+[![npm version](https://img.shields.io/npm/v/@hookkit/core?color=green)](https://www.npmjs.com/package/@hookkit/core)
+[![npm downloads](https://img.shields.io/npm/dm/@hookkit/core)](https://www.npmjs.com/package/@hookkit/core)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-0.2.0-green)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)
 ![Vite](https://img.shields.io/badge/Vite-7.1-646CFF)
 ![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-green)
